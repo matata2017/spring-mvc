@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<web-app version="2.4"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_4.xsd">
+  <display-name>xxy spring mvc</display-name>  
+  <!-- spring 应用上下文   层次化的 applicationContext-->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/config/spring/applicationContext.xml</param-value>
+  </context-param>
+  
+  
+  <!--servlet API的版本2.3增加了对事件监听程序的支持，事件监听程序在建立、修改和删除会话或servlet环境时得到通知。
+          Listener元素指出事件监听程序类-->
+  <listener>
+  	<listener-class>
+  		org.springframework.web.context.ContextLoaderListener
+  	</listener-class>
+  </listener>
+  
+  
+    <servlet-mapping>
+      <servlet-name>default</servlet-name>  
+    	<url-pattern>*.png</url-pattern> 
+  </servlet-mapping>
+  
+      <servlet-mapping>
+      <servlet-name>default</servlet-name>  
+    	<url-pattern>*.jpg</url-pattern> 
+  </servlet-mapping>
+  
+        <servlet-mapping>
+      <servlet-name>default</servlet-name>  
+    	<url-pattern>*.ttf</url-pattern> 
+  </servlet-mapping>
+  
+  
+        <servlet-mapping>
+      <servlet-name>default</servlet-name>  
+    	<url-pattern>*.woff</url-pattern> 
+  </servlet-mapping>
+  
+  
+    <servlet-mapping>
+      <servlet-name>default</servlet-name>  
+    	<url-pattern>*.js</url-pattern> 
+  </servlet-mapping>
+  
+    <servlet-mapping>
+      <servlet-name>default</servlet-name>  
+    	<url-pattern>*.css</url-pattern> 
+  </servlet-mapping>
+  
+     <servlet-mapping>
+      <servlet-name>default</servlet-name>  
+    	<url-pattern>*.gif</url-pattern> 
+  </servlet-mapping>
+  
+  <!-- 配置servlet -->  
+  <servlet>  
+      <servlet-name>mvc-dispatcher</servlet-name>  
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
+      <init-param>  
+      <param-name>contextConfigLocation</param-name>  
+      <param-value>/WEB-INF/config/spring/mvc-spring.xml</param-value>  
+      </init-param>  
+      <load-on-startup>1</load-on-startup>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>mvc-dispatcher</servlet-name>  
+    <url-pattern>/</url-pattern>  
+  </servlet-mapping>  
+  
+  
+
+  
+  <!--配置了当系统发生404错误时，跳转到错误处理页面NotFound.jsp-->
+ <error-page>
+      <error-code>404</error-code>
+       <location>/NotFound.jsp</location>
+ </error-page>
+ 
+ <!--配置了当系统发生java.lang.NullException（即空指针异常）时，跳转到错误处理页面error.jsp-->
+ <error-page>
+       <exception-type>java.lang.NullException</exception-type>
+       <location>/error.jsp</location>
+</error-page>
+
+
+
+</web-app> 
