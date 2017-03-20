@@ -12,6 +12,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_4.xsd">
   </context-param>
   
   
+  
+  <!-- 指定监听器加载的log4j配置文件 -->
+  <context-param>
+      <param-name>log4j</param-name>
+      <param-value>/WEB-INF/config/log4j.properties</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+  
   <!--servlet API的版本2.3增加了对事件监听程序的支持，事件监听程序在建立、修改和删除会话或servlet环境时得到通知。
           Listener元素指出事件监听程序类-->
   <listener>
