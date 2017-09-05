@@ -15,6 +15,8 @@ import com.xxy.mvc.service.CourseService;
  * @version 1.0
  * 1.0 中暂时没有连接数据库 因此 直接SET值
  *
+ *@return
+ *返回的一个课程对象
  */
 @Service("CourseService")
 public class CoursServiceImpl implements CourseService {

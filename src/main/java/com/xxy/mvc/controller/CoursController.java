@@ -26,6 +26,7 @@ public class CoursController {
 	public String ViewCourse(@RequestParam("CoursId")Integer CoursId,Model model ){
 		Cours cours =CourseService.getCoursById(CoursId);
 		logger.debug("CoursId is "+ CoursId);
+		System.out.println("CoursId is"+CoursId);
 		model.addAttribute(cours);
 		return "CourseView";
 	}

@@ -1,5 +1,6 @@
 package com.xxy.mvc.controller;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HellowMvcController {
 	@RequestMapping("/mvc")
 	public String HellowMvc() {
+		Logger logger = Logger.getLogger(HellowMvcController.class); //log4j¥Ú”°»’÷æ
+		logger.debug("intohellow");
 		return "hellow";
 	}
 }

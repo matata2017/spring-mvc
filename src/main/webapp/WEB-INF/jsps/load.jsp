@@ -26,7 +26,7 @@
 	<script type="text/javascript">
     $(document).ready(function() {
         $("#file-1").fileinput({
-            uploadUrl: '/hellow/mvc', // you must set a valid URL here else you will get an error
+            uploadUrl: 'localhost:8080/hellow/mvc', // you must set a valid URL here else you will get an error
             allowedFileExtensions : ['jpg', 'png','gif'],
             uploadAsync: false, //设置同步，异步 （同步） 
             overwriteInitial: false,
@@ -80,7 +80,7 @@
 	
 	<div class="body">
 	<div class="container">
-	<form enctype="multipart/form-data">
+		<form enctype="multipart/form-data">
 		        <div class="form-group">
                     <input id="file-1" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="1">
                 </div>

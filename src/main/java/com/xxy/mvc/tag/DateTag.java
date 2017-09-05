@@ -13,6 +13,8 @@ public class DateTag  extends SimpleTagSupport {
 	 * @author xxy
 	 * <br>
 	 * 自定义输出当前时间JSP标签
+	 * @return
+	 * 当前时间
 	 */
 	public void doTag() throws JspException, IOException {
 		// TODO Auto-generated method stub
