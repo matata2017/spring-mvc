@@ -11,3 +11,6 @@ mvn -Dslf4j=false -Dlog4j.configuration=file:./src/main/webapp/WEB-INF/config/lo
 6.0 load.jsp   自己开始写 bootstrap ，个人比较喜欢bootstrap的响应式布局，不用考虑不同大小屏幕的分辨率，
 先写个导航栏 ，再引入文件上传插件
 7.0先搞个静态网页再说
+
+
+https://matata2017.github.io/cpts_517_tys 一个网站模板
